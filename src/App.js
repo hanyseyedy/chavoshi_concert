@@ -1,24 +1,23 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import { create } from "jss";
+import rtl from "jss-rtl";
+import { StylesProvider, jssPreset } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/core/styles";
+import CustomTheme from "./assets/CustomTheme";
+import "./assets/fonts/css/fontiran.css";
+import "./assets/styles.css";
+import { Typography } from "@material-ui/core";
+
+// Configure JSS
+const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello world!
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={CustomTheme}>
+      <StylesProvider jss={jss}>
+        <Typography variant="body1">سیدهانی سیدی</Typography>
+      </StylesProvider>
+    </ThemeProvider>
   );
 }
 
