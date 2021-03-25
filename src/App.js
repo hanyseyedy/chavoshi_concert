@@ -1,12 +1,15 @@
-import React from "react";
+import {
+  jssPreset,
+  StylesProvider,
+  ThemeProvider,
+} from "@material-ui/core/styles";
 import { create } from "jss";
 import rtl from "jss-rtl";
-import { StylesProvider, jssPreset } from "@material-ui/core/styles";
-import { ThemeProvider } from "@material-ui/core/styles";
+import React from "react";
 import CustomTheme from "./assets/CustomTheme";
 import "./assets/fonts/css/fontiran.css";
 import "./assets/styles.css";
-import { Typography } from "@material-ui/core";
+import Header from "./components/header_footer/Header";
 
 // Configure JSS
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
@@ -15,7 +18,7 @@ function App() {
   return (
     <ThemeProvider theme={CustomTheme}>
       <StylesProvider jss={jss}>
-        <Typography variant="body1">سیدهانی سیدی</Typography>
+        <Header />
       </StylesProvider>
     </ThemeProvider>
   );
