@@ -9,6 +9,7 @@ import React from "react";
 import CustomTheme from "./assets/CustomTheme";
 import "./assets/fonts/css/fontiran.css";
 import "./assets/styles.css";
+import Featured from "./components/featured";
 import Header from "./components/header_footer/Header";
 
 // Configure JSS
@@ -18,7 +19,10 @@ function App() {
   return (
     <ThemeProvider theme={CustomTheme}>
       <StylesProvider jss={jss}>
-        <Header />
+        <div style={{ height: "1500px", background: "lightblue" }}>
+          <Header />
+          <Featured />
+        </div>
       </StylesProvider>
     </ThemeProvider>
   );
