@@ -7,7 +7,6 @@ import slide_three from "../../assets/images/mo_3.jpg";
 
 function Carrousel() {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,

@@ -9,6 +9,7 @@ import React from "react";
 import CustomTheme from "./assets/CustomTheme";
 import "./assets/fonts/css/fontiran.css";
 import "./assets/styles.css";
+import ConcertInfo from "./components/concertinfo";
 import Featured from "./components/featured";
 import Header from "./components/header_footer/Header";
 
@@ -22,6 +23,7 @@ function App() {
         <div style={{ height: "1500px", background: "lightblue" }}>
           <Header />
           <Featured />
+          <ConcertInfo />
         </div>
       </StylesProvider>
     </ThemeProvider>
