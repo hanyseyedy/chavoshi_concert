@@ -12,6 +12,7 @@ import "./assets/styles.css";
 import ConcertInfo from "./components/concertinfo";
 import Featured from "./components/featured";
 import Header from "./components/header_footer/Header";
+import Highlights from "./components/highlights";
 
 // Configure JSS
 const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
@@ -20,10 +21,11 @@ function App() {
   return (
     <ThemeProvider theme={CustomTheme}>
       <StylesProvider jss={jss}>
-        <div style={{ height: "1500px", background: "lightblue" }}>
+        <div style={{ height: "auto", width: "100%", overflow: "hidden" }}>
           <Header />
           <Featured />
           <ConcertInfo />
+          <Highlights />
         </div>
       </StylesProvider>
     </ThemeProvider>
