@@ -19,7 +19,7 @@ function ConcertInfo() {
                     style={{ background: `url(${icon_calendar})` }}
                   ></div>
                   <div className="cn_title">تاریخ و زمان کنسرت</div>
-                  <div className="cn_desc">۲۱ اردیبهشت ۱۴۰۰</div>
+                  <div className="cn_desc">۲۱ تیر ۱۴۰۰</div>
                 </div>
               </div>
             </div>
